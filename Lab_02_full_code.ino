@@ -24,8 +24,11 @@ void setup(){
 void loop(){
   
   int i;
- // wiper();
- /*
+   
+   for( i = 0 ; i < 4 ; i++){
+     wiper(30);
+   }
+ 
    for( i = 0 ; i < 5 ; i++ ){
      
      light_line();
@@ -36,7 +39,7 @@ void loop(){
    }
    for( i = 0 ; i < 8 ; i++ ){
      rise(100);
-   }*/
+   }
   //circle(2);
   //delay(1000);
   //light(4);
@@ -44,26 +47,112 @@ void loop(){
 
 // tric 4
 
-void wiper(){
+void wiper(int k){
   
-  digitalWrite(tran[2],HIGH);
-  digitalWrite(tran[1],LOW);
-  digitalWrite(tran[0],LOW);
-  digitalWrite(led[9],HIGH);
+  int i;
   
-  delay(1);
+  for(i = 0 ; i < k ; i++ ){
+   
+    
+    light(20);
+    delay(1);
+    light(11);
+    delay(1);
+    light(2);
+    delay(1);
+    
+    
+    light(24);
+    delay(1);
+    light(15);
+    delay(1);
+    light(6);
+    delay(1);
+    
+  }
   
-  digitalWrite(tran[2],LOW);
-  digitalWrite(tran[1],HIGH);
-  digitalWrite(tran[0],LOW);
-  digitalWrite(led[1],HIGH);
+  for(i = 0 ; i < k ; i++) {
+    
   
-  delay(1);
+    light(20);
+    delay(1);
+    light(14);
+    delay(1);
+    light(8);
+    delay(1);
+    
+    light(10);
+    delay(1);
+    light(9);
+    delay(1);
+    
+    light(24);
+    delay(1);
+    light(15);
+    delay(1);
+    light(8);
+    delay(1);
+    
+    light(12);
+    delay(1);
+    light(9);
+    delay(1);
+    
+    
+  }
   
-  digitalWrite(tran[2],LOW);
-  digitalWrite(tran[1],LOW);
-  digitalWrite(tran[0],HIGH);
-  digitalWrite(led[2],HIGH);
+  for( i = 0 ; i < k ; i++){
+    light(20);
+    delay(1);
+    light(23);
+    delay(1);
+    light(26);
+    delay(1);
+    
+    light(27);
+    delay(1);
+    light(19);
+    delay(1);
+    
+    light(24);
+    delay(1);
+    light(25);
+    delay(1);
+    light(26);
+    delay(1);
+    
+    light(21);
+    delay(1);
+    light(27);
+  }
+  
+  for(i = 0 ; i < k ; i++) {
+    light(20);
+    delay(1);
+    light(14);
+    delay(1);
+    light(8);
+    delay(1);
+    
+    light(10);
+    delay(1);
+    light(9);
+    delay(1);
+    
+    light(24);
+    delay(1);
+    light(15);
+    delay(1);
+    light(8);
+    delay(1);
+    
+    light(12);
+    delay(1);
+    light(9);
+    delay(1);
+    
+      
+}
   
 }
 
