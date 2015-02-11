@@ -1,6 +1,7 @@
 int led[9] = {1,2,3,4,5,6,7,8,9};
 int tran[3] = {10,11,12};
-int switc = 13;
+int switc = 0;
+int count = 0;
 
 void setup(){
   int i;
@@ -24,22 +25,44 @@ void setup(){
 void loop(){
   
   int i;
+
+    int buttonState = digitalRead(switc);
+    
+    if (buttonState == 1) count++;
+    
+    switch (count % 4){
+    
+      case 0:
+        wiper(30);
+        break;
+      case 1:
+        light_line();
+        break;
+      case 2:
+        line();
+        break;
+      case 3:
+        for( i = 0 ; i < 8 ; i++ ){
+           rise(100);
+        }
+        count = 3;    
+        break;
+    
+    }
    
-   for( i = 0 ; i < 4 ; i++){
-     wiper(30);
-   }
+//   for( i = 0 ; i < 4 ; i++){
+     
+//   }
  
-   for( i = 0 ; i < 5 ; i++ ){
+//   for( i = 0 ; i < 5 ; i++ ){
      
-     light_line();
      
-   }
-   for( i = 0 ; i < 3; i++ ){
-     line();
-   }
-   for( i = 0 ; i < 8 ; i++ ){
-     rise(100);
-   }
+     
+//   }
+//   for( i = 0 ; i < 3; i++ ){
+     
+//   }
+//   
   //circle(2);
   //delay(1000);
   //light(4);
